@@ -13,7 +13,7 @@ export interface SharePreset {
 
 export const DEFAULT_PRESETS: SharePreset[] = [
   {
-    id: 's0000000-0000-0000-0000-000000000001',
+    id: 'e0000000-0000-0000-0000-000000000001',
     label: 'Standard Marine Parts Pack',
     short_code: 'CRON-GEN',
     document_ids: [
@@ -23,7 +23,7 @@ export const DEFAULT_PRESETS: SharePreset[] = [
     is_preset: true,
   },
   {
-    id: 's0000000-0000-0000-0000-000000000002',
+    id: 'e0000000-0000-0000-0000-000000000002',
     label: 'Full Commercial & Certs Pack',
     short_code: 'CRON-FULL',
     document_ids: [

@@ -19,7 +19,7 @@ const SAMPLE_PROFILE: StaffProfile = {
   photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80',
   role: 'staff',
   staff_slug: 'ronald-tan',
-  active_share_link_id: 's0000000-0000-0000-0000-000000000001',
+  active_share_link_id: 'e0000000-0000-0000-0000-000000000001',
   expo_push_token: null,
 };
 

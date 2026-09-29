@@ -64,7 +64,7 @@ export default function ShareScreen() {
 
   // QR & Link state
   const [shortCode, setShortCode] = useState<string>('CRON-GEN');
-  const [shareLinkId, setShareLinkId] = useState<string | null>('s0000000-0000-0000-0000-000000000001');
+  const [shareLinkId, setShareLinkId] = useState<string | null>('e0000000-0000-0000-0000-000000000001');
   const [isNfcActivePack, setIsNfcActivePack] = useState<boolean>(true);
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [isCreatingLink, setIsCreatingLink] = useState<boolean>(false);

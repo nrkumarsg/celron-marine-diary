@@ -24,7 +24,7 @@ export const SAMPLE_CARDS: Record<string, CardData> = {
       staff_slug: 'ronald-tan',
     },
     share_link: {
-      id: 's0000000-0000-0000-0000-000000000001',
+      id: 'e0000000-0000-0000-0000-000000000001',
       short_code: 'CRON-GEN',
       label: 'Generator & Pump Parts Pack',
       expires_at: null,
@@ -73,7 +73,7 @@ export const SAMPLE_CARDS: Record<string, CardData> = {
       staff_slug: 'ronald-tan',
     },
     share_link: {
-      id: 's0000000-0000-0000-0000-000000000001',
+      id: 'e0000000-0000-0000-0000-000000000001',
       short_code: 'CRON-GEN',
       label: 'NFC Active Marine Pack',
       expires_at: null,
