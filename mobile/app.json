@@ -2,6 +2,7 @@
   "expo": {
     "name": "Cel-Ron Marine",
     "slug": "celron-marine",
+    "owner": "nrkumarsgs-team",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -53,6 +54,14 @@
           "color": "#0A2540"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0c73fa71-fb4b-4d6a-a9ae-b05c63fb8da2"
+      }
+    }
   }
 }
