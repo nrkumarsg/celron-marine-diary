@@ -23,6 +23,7 @@ import {
   Building2,
   ChevronRight,
   ExternalLink,
+  FileText,
 } from 'lucide-react-native';
 
 export default function ProfileScreen() {
@@ -81,6 +82,22 @@ export default function ProfileScreen() {
             <Text style={styles.nfcBannerSub}>Program card with /t/{profile?.staff_slug}</Text>
           </View>
           <ChevronRight color="#38BDF8" size={20} />
+        </TouchableOpacity>
+
+        {/* DOCUMENT ADMIN SHORTCUT */}
+        <TouchableOpacity
+          style={[styles.nfcBanner, { borderColor: '#1E40AF', backgroundColor: '#091A30' }]}
+          onPress={() => router.push('/documents')}
+          activeOpacity={0.85}
+        >
+          <View style={[styles.nfcBannerIcon, { backgroundColor: '#0F2D54' }]}>
+            <FileText color="#60A5FA" size={24} />
+          </View>
+          <View style={styles.nfcBannerText}>
+            <Text style={styles.nfcBannerTitle}>Company Documents</Text>
+            <Text style={styles.nfcBannerSub}>Upload catalogues, brochures & certificates</Text>
+          </View>
+          <ChevronRight color="#60A5FA" size={20} />
         </TouchableOpacity>
 
         {/* CONTACT DETAILS LIST */}
