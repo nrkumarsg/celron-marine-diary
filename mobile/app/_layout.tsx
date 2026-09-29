@@ -38,6 +38,7 @@ function RootNavigation() {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="share" options={{ headerShown: false }} />
       <Stack.Screen name="documents" options={{ headerShown: false }} />
+      <Stack.Screen name="contacts" options={{ headerShown: false }} />
       <Stack.Screen name="nfc-card" options={{ presentation: 'modal', headerShown: true, title: 'My NFC Card', headerTintColor: '#fff', headerStyle: { backgroundColor: '#0A2540' } }} />
     </Stack>
   );
