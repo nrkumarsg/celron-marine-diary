@@ -3,14 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "Cel-Ron Enterprises Pte Ltd - Digital Business Card, Document Sharing, Card Scanner & Visitor Diary",
-  "workspaces": [
-    "web",
-    "mobile"
-  ],
   "scripts": {
-    "web:dev": "npm run dev --workspace=web",
-    "web:build": "npm run build --workspace=web",
-    "mobile:start": "npm run start --workspace=mobile",
+    "web:dev": "npm --prefix web run dev",
+    "web:build": "npm --prefix web run build",
+    "mobile:start": "npm --prefix mobile run start",
     "db:push": "supabase db push",
     "db:seed": "supabase db reset"
   },

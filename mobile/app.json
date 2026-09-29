@@ -61,7 +61,9 @@
           "icon": "./assets/icon.png",
           "color": "#0A2540"
         }
-      ]
+      ],
+      "expo-asset",
+      "expo-font"
     ],
     "extra": {
       "router": {
