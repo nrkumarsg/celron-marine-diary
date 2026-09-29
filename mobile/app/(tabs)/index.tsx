@@ -64,7 +64,7 @@ export default function HomeScreen() {
           {/* 1. Share Card & Documents */}
           <TouchableOpacity
             style={[styles.actionCard, styles.actionCardShare]}
-            onPress={() => router.push('/(tabs)')}
+            onPress={() => router.push('/share')}
             activeOpacity={0.85}
           >
             <View style={styles.actionIconContainer}>
@@ -128,7 +128,11 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
 
-          <View style={styles.previewBox}>
+          <TouchableOpacity
+            style={styles.previewBox}
+            onPress={() => router.push('/share')}
+            activeOpacity={0.9}
+          >
             <View style={styles.previewTop}>
               <View>
                 <Text style={styles.previewSlug}>/t/{profile?.staff_slug}</Text>
@@ -158,7 +162,7 @@ export default function HomeScreen() {
                 <Text style={styles.statLabel}>Leads</Text>
               </View>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
         {/* RECENT ACTIVITY & SHARES */}
