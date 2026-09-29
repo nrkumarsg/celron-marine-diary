@@ -1,0 +1,131 @@
+import { CardData } from './types';
+
+export const SAMPLE_COMPANY = {
+  id: 'c0000000-0000-0000-0000-000000000001',
+  name: 'Cel-Ron Enterprises Pte Ltd',
+  logo_url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&auto=format&fit=crop&q=80',
+  address: '1 Rochor Canal Road, #03-05 Sim Lim Square, Singapore 188504',
+  website: 'https://celron.com.sg',
+  brand_color: '#0A2540',
+};
+
+export const SAMPLE_CARDS: Record<string, CardData> = {
+  'CRON-GEN': {
+    status: 'ok',
+    company: SAMPLE_COMPANY,
+    profile: {
+      id: 'a0000000-0000-0000-0000-000000000002',
+      full_name: 'Ronald Tan',
+      job_title: 'Marine Sales Director',
+      phone: '+65 9123 4567',
+      whatsapp: '+65 9123 4567',
+      email: 'ronald.tan@celron.com.sg',
+      photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80',
+      staff_slug: 'ronald-tan',
+    },
+    share_link: {
+      id: 's0000000-0000-0000-0000-000000000001',
+      short_code: 'CRON-GEN',
+      label: 'Generator & Pump Parts Pack',
+      expires_at: null,
+    },
+    documents: [
+      {
+        id: 'd0000000-0000-0000-0000-000000000001',
+        title: 'Cel-Ron Corporate Profile & Marine Services',
+        category: 'name_card',
+        file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+        file_type: 'application/pdf',
+        thumbnail_url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&auto=format&fit=crop&q=80',
+        sort_order: 1,
+      },
+      {
+        id: 'd0000000-0000-0000-0000-000000000002',
+        title: 'Marine Engine, Pump & Auxiliary Spare Parts Catalogue 2026',
+        category: 'catalogue',
+        file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+        file_type: 'application/pdf',
+        thumbnail_url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=80',
+        sort_order: 2,
+      },
+      {
+        id: 'd0000000-0000-0000-0000-000000000003',
+        title: 'ISO 9001:2015 & ClassNK Marine Supply Certification',
+        category: 'certificate',
+        file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+        file_type: 'application/pdf',
+        thumbnail_url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&auto=format&fit=crop&q=80',
+        sort_order: 3,
+      },
+    ],
+  },
+  'ronald-tan': {
+    status: 'ok',
+    company: SAMPLE_COMPANY,
+    profile: {
+      id: 'a0000000-0000-0000-0000-000000000002',
+      full_name: 'Ronald Tan',
+      job_title: 'Marine Sales Director',
+      phone: '+65 9123 4567',
+      whatsapp: '+65 9123 4567',
+      email: 'ronald.tan@celron.com.sg',
+      photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80',
+      staff_slug: 'ronald-tan',
+    },
+    share_link: {
+      id: 's0000000-0000-0000-0000-000000000001',
+      short_code: 'CRON-GEN',
+      label: 'NFC Active Marine Pack',
+      expires_at: null,
+    },
+    documents: [
+      {
+        id: 'd0000000-0000-0000-0000-000000000001',
+        title: 'Cel-Ron Corporate Profile & Marine Services',
+        category: 'name_card',
+        file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+        file_type: 'application/pdf',
+        thumbnail_url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&auto=format&fit=crop&q=80',
+        sort_order: 1,
+      },
+      {
+        id: 'd0000000-0000-0000-0000-000000000002',
+        title: 'Marine Engine, Pump & Auxiliary Spare Parts Catalogue 2026',
+        category: 'catalogue',
+        file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+        file_type: 'application/pdf',
+        thumbnail_url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=80',
+        sort_order: 2,
+      },
+    ],
+  },
+  'celine-lim': {
+    status: 'ok',
+    company: SAMPLE_COMPANY,
+    profile: {
+      id: 'a0000000-0000-0000-0000-000000000003',
+      full_name: 'Celine Lim',
+      job_title: 'Marine Technical Specialist',
+      phone: '+65 8234 5678',
+      whatsapp: '+65 8234 5678',
+      email: 'celine.lim@celron.com.sg',
+      photo_url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80',
+      staff_slug: 'celine-lim',
+    },
+    share_link: {
+      short_code: 'celine-lim',
+      label: 'Default NFC Tap Pack',
+    },
+    documents: [
+      {
+        id: 'd0000000-0000-0000-0000-000000000001',
+        title: 'Cel-Ron Corporate Profile & Marine Services',
+        category: 'name_card',
+        file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+        file_type: 'application/pdf',
+        thumbnail_url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&auto=format&fit=crop&q=80',
+        sort_order: 1,
+      },
+    ],
+  },
+};
