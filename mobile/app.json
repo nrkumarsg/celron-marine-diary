@@ -4,6 +4,10 @@
     "slug": "celron-marine",
     "owner": "nrkumarsgs-team",
     "version": "1.0.0",
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -19,6 +23,8 @@
       "entitlements": {
         "com.apple.developer.nfc.readersession.formats": [
           "NDEF",
+          "TAG",
+          "NDEF",
           "TAG"
         ]
       },
@@ -27,8 +33,10 @@
         "NSCameraUsageDescription": "Allow Cel-Ron Marine to capture and scan business cards with AI.",
         "NSContactsUsageDescription": "Allow Cel-Ron Marine to save scanned client cards directly to your phone contacts.",
         "UIBackgroundModes": [
+          "remote-notification",
           "remote-notification"
-        ]
+        ],
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
