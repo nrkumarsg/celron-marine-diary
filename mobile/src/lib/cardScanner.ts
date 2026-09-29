@@ -371,3 +371,46 @@ export async function getLastEventName(): Promise<string> {
     return 'Asia Pacific Maritime (APM)';
   }
 }
+
+/**
+ * Exports scanned contacts list to CSV via native share sheet
+ */
+export async function exportContactsToCsv(contacts: ScannedContactRecord[]): Promise<boolean> {
+  if (!contacts || contacts.length === 0) return false;
+
+  const headers = ['Full Name', 'Job Title', 'Company', 'Mobile Phone', 'Office Phone', 'Email', 'Website', 'Event', 'Tags', 'Notes', 'Created At'];
+  const rows = contacts.map((c) => {
+    const mob = c.phones?.find((p) => p.label === 'mobile')?.number || c.phones?.[0]?.number || '';
+    const off = c.phones?.find((p) => p.label === 'office')?.number || '';
+    const email = c.emails?.[0] || '';
+    const tags = (c.tags || []).join(';');
+    return [
+      `"${c.full_name}"`,
+      `"${c.job_title || ''}"`,
+      `"${c.company_name || ''}"`,
+      `"${mob}"`,
+      `"${off}"`,
+      `"${email}"`,
+      `"${c.website || ''}"`,
+      `"${c.met_at_event || ''}"`,
+      `"${tags}"`,
+      `"${(c.notes || '').replace(/"/g, '""')}"`,
+      `"${c.created_at}"`,
+    ].join(',');
+  });
+
+  const csvContent = [headers.join(','), ...rows].join('\n');
+
+  try {
+    const { Share } = await import('react-native');
+    await Share.share({
+      message: csvContent,
+      title: 'Cel-Ron Scanned Contacts Export.csv',
+    });
+    return true;
+  } catch (err) {
+    console.warn('CSV share error:', err);
+    return false;
+  }
+}
+

@@ -20,6 +20,7 @@ import {
   QrCode,
   Radio,
   FileText,
+  BarChart3,
 } from 'lucide-react-native';
 
 export default function HomeScreen() {
@@ -112,6 +113,22 @@ export default function HomeScreen() {
               <Text style={styles.actionDesc}>Live Reception Log</Text>
             </View>
             <ChevronRight color="#A7F3D0" size={18} />
+          </TouchableOpacity>
+
+          {/* 4. Leads & Stats Analytics */}
+          <TouchableOpacity
+            style={[styles.actionCard, { backgroundColor: '#06281D', borderColor: '#059669' }]}
+            onPress={() => router.push('/leads-stats')}
+            activeOpacity={0.85}
+          >
+            <View style={[styles.actionIconContainer, { backgroundColor: '#064E3B' }]}>
+              <BarChart3 color="#34D399" size={24} />
+            </View>
+            <View style={styles.actionCardBody}>
+              <Text style={styles.actionTitle}>Leads & Stats</Text>
+              <Text style={styles.actionDesc}>PDPA & Analytics</Text>
+            </View>
+            <ChevronRight color="#6EE7B7" size={18} />
           </TouchableOpacity>
         </View>
 

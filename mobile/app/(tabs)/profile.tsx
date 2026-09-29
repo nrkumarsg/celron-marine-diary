@@ -24,6 +24,7 @@ import {
   ChevronRight,
   ExternalLink,
   FileText,
+  BarChart3,
 } from 'lucide-react-native';
 
 export default function ProfileScreen() {
@@ -98,6 +99,22 @@ export default function ProfileScreen() {
             <Text style={styles.nfcBannerSub}>Upload catalogues, brochures & certificates</Text>
           </View>
           <ChevronRight color="#60A5FA" size={20} />
+        </TouchableOpacity>
+
+        {/* LEADS & ANALYTICS SHORTCUT */}
+        <TouchableOpacity
+          style={[styles.nfcBanner, { borderColor: '#059669', backgroundColor: '#06281D' }]}
+          onPress={() => router.push('/leads-stats')}
+          activeOpacity={0.85}
+        >
+          <View style={[styles.nfcBannerIcon, { backgroundColor: '#064E3B' }]}>
+            <BarChart3 color="#34D399" size={24} />
+          </View>
+          <View style={styles.nfcBannerText}>
+            <Text style={styles.nfcBannerTitle}>Leads, Stats & PDPA</Text>
+            <Text style={styles.nfcBannerSub}>Client inquiries, scan analytics & 12M data purge</Text>
+          </View>
+          <ChevronRight color="#34D399" size={20} />
         </TouchableOpacity>
 
         {/* CONTACT DETAILS LIST */}
