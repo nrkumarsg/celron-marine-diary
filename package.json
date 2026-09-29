@@ -1,0 +1,27 @@
+{
+  "name": "celron-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cel-Ron Enterprises Pte Ltd - Digital Business Card, Document Sharing, Card Scanner & Visitor Diary",
+  "workspaces": [
+    "web",
+    "mobile"
+  ],
+  "scripts": {
+    "web:dev": "npm run dev --workspace=web",
+    "web:build": "npm run build --workspace=web",
+    "mobile:start": "npm run start --workspace=mobile",
+    "db:push": "supabase db push",
+    "db:seed": "supabase db reset"
+  },
+  "keywords": [
+    "celron",
+    "marine",
+    "digital-business-card",
+    "visitor-diary",
+    "nfc",
+    "ai-scanner"
+  ],
+  "author": "Cel-Ron Enterprises Pte Ltd",
+  "license": "UNLICENSED"
+}
