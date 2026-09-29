@@ -65,14 +65,19 @@ export default function VisitorCheckInPage() {
           const { data, error } = await supabase.rpc('get_active_staff_list');
           if (!error && data && Array.isArray(data) && data.length > 0) {
             setStaffList(data);
-            setHostId(data[0].id);
+            // Default to Cel-Ron Operations Admin
+            const adminOp = data.find((s: StaffOption) =>
+              s.full_name.toLowerCase().includes('operations')
+            );
+            setHostId(adminOp ? adminOp.id : data[0].id);
             return;
           }
         } catch (e) {
           console.warn('Could not load staff list from Supabase:', e);
         }
       }
-      setHostId(DEFAULT_STAFF[0].id);
+      const defaultOp = DEFAULT_STAFF.find((s) => s.full_name.includes('Operations')) || DEFAULT_STAFF[2];
+      setHostId(defaultOp.id);
     }
 
     loadStaff();
@@ -174,9 +179,11 @@ export default function VisitorCheckInPage() {
       <header className="relative z-10 border-b border-slate-800/80 bg-slate-950/60 backdrop-blur-md px-6 py-4">
         <div className="max-w-md mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-sky-700 flex items-center justify-center shadow-lg shadow-blue-900/30">
-              <Building2 className="w-6 h-6 text-white" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Cel-Ron Enterprises"
+              className="w-12 h-12 object-contain drop-shadow"
+            />
             <div>
               <h1 className="text-sm font-bold tracking-tight text-white uppercase">
                 Cel-Ron Enterprises Pte Ltd
@@ -252,7 +259,7 @@ export default function VisitorCheckInPage() {
                 Visitor Registration
               </h2>
               <p className="text-xs text-slate-400 mt-1">
-                Sim Lim Square #03-05 Office • Please check in before meeting staff
+                Sim Lim Tower #03-05 Office • Please input your requirement. Thanks.
               </p>
             </div>
 
@@ -354,29 +361,6 @@ export default function VisitorCheckInPage() {
                       </option>
                     ))}
                   </select>
-                </div>
-              </div>
-
-              {/* Party Size */}
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">
-                  Party Size (Number of Pax)
-                </label>
-                <div className="flex items-center gap-3">
-                  {[1, 2, 3, 4, 5].map((num) => (
-                    <button
-                      key={num}
-                      type="button"
-                      onClick={() => setPartySize(num)}
-                      className={`flex-1 py-2 rounded-xl text-xs font-bold transition ${
-                        partySize === num
-                          ? 'bg-blue-600 text-white shadow-md'
-                          : 'bg-slate-950/80 border border-slate-800 text-slate-400 hover:text-white'
-                      }`}
-                    >
-                      {num}
-                    </button>
-                  ))}
                 </div>
               </div>
 

@@ -45,9 +45,11 @@ export default function ReceptionPosterPage() {
       <div className="w-full max-w-2xl bg-white rounded-3xl print:rounded-none shadow-2xl print:shadow-none p-8 sm:p-12 border border-slate-200 print:border-none flex flex-col items-center text-center justify-between min-h-[840px] print:min-h-screen">
         {/* HEADER BRANDING */}
         <div className="w-full border-b-2 border-slate-900 pb-6 flex flex-col items-center">
-          <div className="w-16 h-16 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center mb-3 shadow-md">
-            <Anchor className="w-9 h-9 text-sky-400" />
-          </div>
+          <img
+            src="/logo.png"
+            alt="Cel-Ron Enterprises Pte Ltd"
+            className="w-28 h-28 object-contain mb-3 drop-shadow-md"
+          />
           <h1 className="text-2xl sm:text-3xl font-black text-[#0A2540] tracking-tight uppercase">
             Cel-Ron Enterprises Pte Ltd
           </h1>
@@ -55,7 +57,7 @@ export default function ReceptionPosterPage() {
             Marine Engine, Pump & Auxiliary Spare Parts • Singapore
           </p>
           <p className="text-[11px] text-slate-500 mt-1">
-            1 Rochor Canal Road, #03-05 Sim Lim Square, Singapore 188504
+            10 Jalan Besar, #03-05 Sim Lim Tower, Singapore 208787 • Tel: +65 8196 2270
           </p>
         </div>
 

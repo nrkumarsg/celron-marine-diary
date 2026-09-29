@@ -93,9 +93,11 @@ export default function CardView({ cardData, vcardUrl }: CardViewProps) {
         {/* HEADER BRANDING */}
         <header className="flex items-center justify-between pb-2 border-b border-slate-800/80">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-700 p-0.5 shadow-md flex items-center justify-center">
-              <Building2 className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Cel-Ron Logo"
+              className="w-10 h-10 object-contain drop-shadow"
+            />
             <div>
               <h2 className="text-xs font-bold uppercase tracking-wider text-sky-400">
                 {company?.name || 'Cel-Ron Enterprises Pte Ltd'}

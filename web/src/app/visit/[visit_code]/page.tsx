@@ -180,9 +180,11 @@ export default function CompleteVisitDetailsPage({
       <header className="border-b border-slate-800 bg-[#0A2540]/80 backdrop-blur-md sticky top-0 z-30 px-6 py-4">
         <div className="max-w-xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center font-bold text-white shadow-lg shadow-emerald-500/20 text-lg">
-              CR
-            </div>
+            <img
+              src="/logo.png"
+              alt="Cel-Ron Enterprises"
+              className="w-12 h-12 object-contain drop-shadow"
+            />
             <div>
               <h1 className="text-base font-bold tracking-tight text-white leading-tight">
                 Cel-Ron Enterprises
@@ -233,13 +235,9 @@ export default function CompleteVisitDetailsPage({
                 <span className="text-slate-400">Company</span>
                 <span className="font-semibold text-slate-200">{company || 'Individual Guest'}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-slate-800/80">
+              <div className="flex justify-between py-1">
                 <span className="text-slate-400">Purpose</span>
                 <span className="font-medium text-slate-200">{purpose}</span>
-              </div>
-              <div className="flex justify-between py-1">
-                <span className="text-slate-400">Party Size</span>
-                <span className="font-medium text-slate-200">{partySize} pax</span>
               </div>
             </div>
 
@@ -393,28 +391,6 @@ export default function CompleteVisitDetailsPage({
                 </div>
               </div>
 
-              {/* Party Size */}
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                  Party Size (Pax)
-                </label>
-                <div className="flex items-center gap-3">
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <button
-                      type="button"
-                      key={n}
-                      onClick={() => setPartySize(n)}
-                      className={`flex-1 py-2 rounded-lg text-xs font-bold border transition-all ${
-                        partySize === n
-                          ? 'bg-emerald-600 text-white border-emerald-500'
-                          : 'bg-[#06172A] text-slate-400 border-slate-700 hover:border-slate-600'
-                      }`}
-                    >
-                      {n === 5 ? '5+' : n}
-                    </button>
-                  ))}
-                </div>
-              </div>
 
               {/* PDPA Consent Box */}
               <div className="p-3 bg-[#06172A] border border-slate-800 rounded-xl space-y-2 mt-4">
